@@ -3,11 +3,11 @@ import { Search, X } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 
-interface SearchBarProps {
+interface Props {
   placeholder?: string;
 }
 
-export default function SearchBar({ placeholder = 'Buscar filmes...' }: SearchBarProps) {
+export default function SearchBar({ placeholder = 'Buscar filmes...' }: Props) {
   
   const [query, setQuery] = useState('');
 

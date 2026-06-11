@@ -4,11 +4,11 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import type { Movie } from '@/types';
 
-interface CardProps {
+interface Props {
   movie: Movie;
 }
 
-export default function MovieCard({ movie }: CardProps) {
+export default function MovieCard({ movie }: Props) {
 
     // Lógica para verificar se o filme está nos favoritos
     const favorite = false; 

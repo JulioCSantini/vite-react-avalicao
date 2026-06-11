@@ -3,11 +3,11 @@ import { Play, Info } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import type { Filme } from '@/types';
 
-interface BannerProps {
+interface Props {
   filme: Filme;
 }
 
-export default function Banner({ filme }: BannerProps) {
+export default function Banner({ filme }: Props) {
   return (
     <div className="relative w-full h-screen bg-black overflow-hidden">
       <div className="absolute inset-0">

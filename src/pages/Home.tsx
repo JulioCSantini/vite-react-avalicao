@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Header from '@/components/Header';
 import Banner from '@/components/Banner';
-import Search from '@/components/Search';
+import SearchBar from '@/components/SearchBar';
 import Card from '@/components/Card';
 import type { Filme } from '@/types';
 import dadosFilmes from '@/data/movies.json';
@@ -20,7 +20,7 @@ export default function Home() {
                         <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
                             Descubra Filmes
                         </h2>
-                         <Search />
+                         <SearchBar />
                     </div>
             
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
