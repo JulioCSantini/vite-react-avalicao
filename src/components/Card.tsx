@@ -3,6 +3,8 @@ import { Heart } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import type { Movie } from '@/types';
+// Linha Adicionada
+import { useFavoritesContext } from '@/contexts/FavoritesContext';
 
 interface Props {
   movie: Movie;
@@ -10,11 +12,19 @@ interface Props {
 
 export default function MovieCard({ movie }: Props) {
 
-    // Lógica para verificar se o filme está nos favoritos
-    const favorite = false; 
+    // Linhas Adicionadas
+    const { isFavorite, addFavorite, removeFavorite } = useFavoritesContext();
+    const favorite = isFavorite(movie.id);
 
-    const handleFavorite = () => {
-        // Lógica para adicionar ou remover dos favoritos
+    const handleFavorite = (e: React.MouseEvent) => {
+        // Linhas Acionadas
+        e.preventDefault();
+        if (favorite) {
+            removeFavorite(movie.id);
+        } 
+        else {
+            addFavorite(movie);
+        }
     }
 
     return (
