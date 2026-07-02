@@ -1,15 +1,17 @@
 import { Route, Switch } from "wouter";
 import Home from '@/pages/Home';
-import MovieDetails from '@/pages/MovieDetails';
-import Favorites from '@/pages/Favorites';
+import Favorites from "./pages/Favorites";
+import Albums from "./pages/Albums";
+import AlbumDetail from "./pages/AlbumDetail";
 
 export default function Router() {
 
   return (
     <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/filme/:id"} component={MovieDetails} />
-      <Route path={"/favoritos"} component={Favorites} />
+      <Route path="/" component={Home} />
+      <Route path="/favorites" component={Favorites} />
+      <Route path="/albums" component={Albums} />
+      <Route path="/albums/:id" component={AlbumDetail} />
     </Switch>
   );
   
